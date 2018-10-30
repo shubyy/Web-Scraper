@@ -58,10 +58,6 @@ int main( int argc, char **argv)
 
     code = curl_easy_perform( curl);
     
-    
-    myfile.open( "file.html", std::ofstream::trunc | std::ofstream::out );
-    myfile << output.memory;
-    myfile.close();
 
     curl_easy_cleanup( curl);
     curl_global_cleanup();
